@@ -39,8 +39,6 @@ class MyLibrary implements Library{
 			for(int i=0;i<count;i++) {
 				if(book[i].equals(rem)) {
 					
-				
-				
 				for(int j=i;j<count-1;j++) {
 					book[j]=book[j+1];
 				}
@@ -48,7 +46,9 @@ class MyLibrary implements Library{
 				
 				count--;
 				System.out.println("Successfully Withdraw...");
+				
 				flag=true;
+				break;
 			}
 			
 			}

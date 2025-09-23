@@ -1,0 +1,28 @@
+package com.str;
+
+public class Panagram {
+	public static void main(String[] args) {
+	
+		String s="The quick brown fox jumps over the lazy dog";
+		
+		String ls=s.toLowerCase();
+		
+		int count=0;
+		
+		for(int i=0;i<ls.length();i++) {
+			if(ls.charAt(i)>='a'&&ls.charAt(i)<='z') {
+				count++;
+			}
+		}
+		
+		if(count==26) {
+			System.out.println("Not Panagram");
+		}else {
+			System.out.println("Panagram");
+		}
+		
+		
+		
+	}
+
+}

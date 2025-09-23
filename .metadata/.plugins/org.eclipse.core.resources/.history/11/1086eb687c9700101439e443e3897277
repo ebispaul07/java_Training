@@ -1,0 +1,110 @@
+/*Create a console-based Library system:
+Define an interface Library with methods addBook(String), removeBook(String) throws Exception, displayBooks().
+Implement it in a class MyLibrary.
+Check book names are not null/empty using String methods.
+Throw a custom BookNotFoundException if removing a non-existing book.
+Use try-catch-finally in main and print "Operation Completed." in finally.
+Allow user to add, remove, or display books.
+*/
+
+
+package com.lib;
+import java.io.IOException;
+import java.util.Scanner;
+
+interface Library{
+	public void addBook(String add);
+	public void removeBook(String rem)throws IOException;
+	public void displayBooks();
+}
+
+
+class MyLibrary implements Library{
+	String book[]=new String[100];
+	int count=0;
+	public void addBook(String add) {
+		
+		
+		
+		
+			System.out.println("Added Book:"+add+" Successfully");
+			book[count]=add;
+			count++;
+		
+	}
+	
+	public void removeBook(String rem)throws IOException{
+			
+			boolean flag=false;
+			
+			for(int i=0;i<count;i++) {
+				if(book[i].equals(rem)) {
+					
+				
+				
+				for(int j=i;j<count-1;j++) {
+					book[j]=book[j+1];
+				}
+				
+				book[count-1]=null;
+				count--;
+				System.out.println("Successfully Removed...");
+				flag=true;
+			}
+			
+			}
+			
+			if(!flag) {
+				System.out.println("Book Not Found");
+			}
+			
+		
+	}
+	public void displayBooks() {
+		if(count==0) {
+			System.out.println("Library is Empty");
+			return;
+		}
+		
+		System.out.println("Available Books");
+		
+		for(int i=0;i<count;i++) {
+			
+			System.out.println(book[i]);
+		}
+		
+	}
+}
+
+
+public class LibrarySystem {
+	public static void main(String[] args) {
+		
+		MyLibrary m=new MyLibrary();
+		
+		
+		
+		try {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter A Book To Add:");
+		String addin=sc.nextLine();
+		System.out.println(addin);
+		m.addBook(addin);
+		
+		}catch(NullPointerException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		try {
+		System.out.print("Enter a Book to Delete:");
+		String del=sc.nextLine();
+		m.removeBook(del);
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+		m.displayBooks();
+		
+	}
+
+}

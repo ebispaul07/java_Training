@@ -1,0 +1,107 @@
+package com.emp;
+
+abstract class Person{
+	private String name;
+	private int age;
+	
+	public Person(String name,int age){
+		this.name=name;
+		this.age=age;
+	}
+	
+	
+	
+	
+	public String getName() {
+		return name;
+	}
+
+
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+
+
+	public int getAge() {
+		return age;
+	}
+
+
+
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+
+
+
+	public abstract void work();
+	
+	public void showDetails() {
+		System.out.println("Name:"+getName());
+		System.out.println("Age:"+getAge());
+	}
+	
+}
+
+
+class Employee extends Person{
+	private double salary;
+	
+	
+	
+	public Employee(String name,int age,double salary){
+		super(name,age);
+		this.salary=salary;
+		
+	}
+	
+	
+	
+	public double getSalary() {
+		return salary;
+	}
+
+
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+
+
+	public void work() {
+		System.out.println("Employee is Working");
+	}
+	
+	public void showDetails() {
+		super.showDetails();
+		System.out.println("Salary:"+getSalary());
+	}
+	
+	public void performWork(Person p) {
+		p.work();
+		p.showDetails();
+	}
+	
+}
+
+
+public class EmployeeManagement {
+	public static void main(String[] args) {
+		Employee e=new Employee("emi",23,1000);
+		e.setName("Ebi");
+		e.setAge(23);
+		e.setSalary(26000);
+		e.showDetails();
+		//e.performWork(e);
+		
+		
+	}
+
+}

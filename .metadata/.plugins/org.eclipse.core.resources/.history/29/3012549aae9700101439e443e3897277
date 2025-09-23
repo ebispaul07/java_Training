@@ -1,0 +1,19 @@
+package com.strsample;
+
+public class StringBuilderStudy {
+	public static void main(String[] args) {
+		
+		StringBuilder sb=new StringBuilder("hello");
+		
+		sb.insert(3, "p");
+		
+		sb.delete(4,6);
+		
+		sb.reverse();
+		
+		System.out.println(sb);
+		
+		
+	}
+
+}

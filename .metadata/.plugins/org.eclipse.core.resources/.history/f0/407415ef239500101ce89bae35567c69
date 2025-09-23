@@ -1,0 +1,16 @@
+package com.sampstr;
+
+public class RemoveWhiteSpace {
+	
+	public static void main(String[] args) {
+		
+	
+	
+	String s="  ebi  ";
+	
+	String remW=s.strip();
+	
+	System.out.println(remW);
+
+	}
+}

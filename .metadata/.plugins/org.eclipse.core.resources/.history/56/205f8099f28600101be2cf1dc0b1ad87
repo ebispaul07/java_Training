@@ -1,0 +1,65 @@
+/*Login Attempt (do-while loop)
+Scenario:
+Simulate a login system. A user is allowed up to 3 attempts to enter the correct password ("java123").
+Requirements:
+Use a do-while loop
+If the password is correct, print “Login Successful”
+If the user fails after 3 attempts, print “Account Locked”
+Hint: Keep track of attempts and break the loop on success*/
+
+
+package com.login;
+
+import java.util.Scanner;
+
+
+public class Login {
+	public static void main(String[] args) {
+		Scanner sc =new Scanner(System.in);
+		
+		
+		
+		int count=1;
+		
+		
+			
+		System.out.print("Enter Name:");
+		String name=sc.nextLine();
+		
+		do {
+		
+		System.out.print("Enter Password:");
+		String pass=sc.nextLine();
+		
+	
+		
+		if(pass=="java123") {
+			System.out.println("Login Successfull");
+			//break;
+		}
+		
+		}while(count<=3);
+		
+		if(count==3) {
+			System.out.println("Account locked");
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,28 @@
+package com.excep;
+
+public class LengthofLongeststr {
+	public static void main(String[] args) {
+		
+		String s="abcabcbb";
+		
+		String ls=s.toLowerCase();
+		
+		int count=0;
+		
+		for(int i=0;i<ls.length();i++) {
+			if(ls.charAt(i)=='a') {
+				count++;
+			}else if(ls.charAt(i)=='b') {
+				count++;
+			}else if(ls.charAt(i)=='c') {
+				count++;
+			}
+		}
+		
+		
+		
+		
+	}
+
+}
+ 

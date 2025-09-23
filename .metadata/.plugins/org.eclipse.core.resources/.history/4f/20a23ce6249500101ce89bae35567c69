@@ -1,0 +1,20 @@
+package com.sampstr;
+
+public class RemoveWhiteSpace {
+	
+	public static void main(String[] args) {
+		
+	
+	
+	String s="  ebi  s";
+	
+	String remW=s.trim();//trim,strip....for leading and trailing space
+	
+	System.out.println(remW);
+	
+	String reSb=s.replace("s", "");
+	
+	System.out.println(reSb);
+
+	}
+}

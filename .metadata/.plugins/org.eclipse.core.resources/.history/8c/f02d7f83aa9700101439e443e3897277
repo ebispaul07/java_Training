@@ -1,0 +1,15 @@
+package com.strsample;
+
+public class StringBuilderStudy {
+	public static void main(String[] args) {
+		
+		StringBuilder sb=new StringBuilder("hello");
+		
+		sb.insert(3, "p");
+		
+		System.out.println(sb);
+		
+		
+	}
+
+}

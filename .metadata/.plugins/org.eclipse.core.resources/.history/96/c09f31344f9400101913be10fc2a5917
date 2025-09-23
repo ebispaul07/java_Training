@@ -1,0 +1,14 @@
+package com.str;
+
+public class relplaceChar {
+	public static void main(String[] args) {
+		
+		String name="ebib";
+		
+		String r=name.replaceAll("[aeiou]", name);
+		
+		System.out.println(r);
+		
+	}
+
+}

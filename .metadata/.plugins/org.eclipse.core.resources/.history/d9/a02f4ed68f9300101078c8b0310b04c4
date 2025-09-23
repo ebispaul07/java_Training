@@ -1,0 +1,27 @@
+package com.excep;
+
+import java.io.IOException;
+import java.io.File;
+
+public class ThrowsSample {
+	
+	public void createFiles() throws IOException{
+		File f=new File("E.txt");
+		f.createNewFile();
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		ThrowsSample t=new ThrowsSample();
+		
+		try {
+			t.createFiles();
+			
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+	}
+
+}

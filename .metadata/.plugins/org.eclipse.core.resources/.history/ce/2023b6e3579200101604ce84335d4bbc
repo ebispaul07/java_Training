@@ -1,0 +1,73 @@
+package com.Abs;
+
+abstract class Employee{
+	private String name;
+	private int salary;
+	
+	
+	Employee(String name,int salary){
+		this.name=name;
+		this.salary=salary;
+	}
+	
+	public  void setName(String name) {
+		this.name=name;
+	}
+	public  String getName() {
+		return name;
+	}
+	
+	public void setSalary(int salary) {
+		this.salary=salary;
+	}
+	public int getSalary() {
+		return salary;
+	}
+	public void display() {
+		System.out.println("Manager name:"+getName());
+		System.out.println("Manager Salary:"+getSalary());
+	}
+}
+
+
+class Manager extends Employee{
+	
+	Manager(String name,int salary){
+		super(name,salary);
+	}
+	
+	public void display() {
+		super.display();
+	}
+}
+
+class Developer extends Employee{
+	
+	Developer(String name,int salary){
+		super(name,salary);
+	}
+	
+	public void display() {
+		System.out.println("Developer Name:"+getName());
+		System.out.println("Developer Salary:"+getSalary());
+	}
+}
+
+
+public class EncapAbstaAccess {
+	public static void main(String[] args) {
+		
+		Manager m=new Manager("Ebi",1000);
+		m.setName("Emi");
+		m.setSalary(10000);
+		m.display();
+		
+		Developer d=new Developer("f",2);
+		d.setName("Ebi");
+		d.setSalary(100);
+		d.display();
+		
+		
+	}
+
+}

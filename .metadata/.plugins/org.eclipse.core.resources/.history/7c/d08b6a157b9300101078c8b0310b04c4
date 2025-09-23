@@ -1,0 +1,120 @@
+/*Create a Java program for an E-commerce Order Management System that demonstrates the four pillars of OOP:
+1. Abstraction – Create an abstract class Product with attributes like name and price, and an abstract method calculateDiscount().
+2. Encapsulation – Keep product details (name, price) private and provide getters and setters.
+3. Inheritance – Create subclasses Electronics, Clothing, and Grocery that extend Product.
+4. Polymorphism – Implement different discount logic in each subclass:
+Electronics → 10% discount
+Clothing → 20% discount
+Grocery → 5% discount*/
+
+package com.ecom;
+
+abstract class Product{
+	private String name;
+	private double price;
+	
+	public abstract void calculateDiscount();
+	
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	
+
+	public double getPrice() {
+		return price;
+	}
+
+}
+
+class Electronics extends Product{
+	
+	public void calculateDiscount() {
+		
+		System.out.println("Your Order:"+getName());
+		
+		double discountPrice=(getPrice()*0.1);
+		System.out.println("Electronics Discount Price From Your Order {"+discountPrice+"}");
+		
+		
+		
+         double afterDisPrice=getPrice()-discountPrice;
+		
+		System.out.println("After Discount Price {"+afterDisPrice+"}");
+		
+		System.out.println();
+	}
+	
+}
+
+class Clothing extends Product{
+	
+		public void calculateDiscount() {
+			
+			System.out.println("Your Order:"+getName());
+			
+			double discountPrice=(getPrice()*0.2);
+			
+			System.out.println("Clothing Discount Price From Your Order {"+discountPrice+"}");
+			
+			
+			
+			double afterDisPrice=getPrice()-discountPrice;
+			
+			System.out.println("After Discount Price {"+afterDisPrice+"}");
+			
+			System.out.println();
+			
+		}
+}
+
+class Grocery extends Product{
+	public void calculateDiscount() {
+		
+		System.out.println("Your Order:"+getName());
+		
+		double discountPrice=(getPrice()*0.05);
+		System.out.println("Grocery Discount Price From Your Order {"+discountPrice+"}");
+		
+		double afterDisPrice=getPrice()-discountPrice;
+		
+		System.out.println("After Discount Price {"+afterDisPrice+"}");
+		
+	}
+}
+
+
+
+
+public class Ecommerce {
+	public static void main(String[] args) {
+		
+		System.out.println("------E-commerce Order Management System------");
+		System.out.println();
+		
+		
+		Product e = new Electronics();
+		e.setName("Laptop");
+		e.setPrice(100);
+		e.calculateDiscount();
+
+		Product c = new Clothing();
+		c.setName("T-Shirt");
+		c.setPrice(100);
+		c.calculateDiscount();
+
+		Product g = new Grocery();
+		g.setName("Apple");
+		g.setPrice(100);
+		g.calculateDiscount();
+	}
+}

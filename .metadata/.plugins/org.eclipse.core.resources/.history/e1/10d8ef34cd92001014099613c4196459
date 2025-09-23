@@ -1,0 +1,75 @@
+/*Create a class Student with:
+Private fields: name (String), grade (int)
+A default constructor and a parameterized constructor (constructor overloading)
+Methods to display student details
+Overload a method updateGrade() to accept either an int or a String grade
+Create a subclass GraduateStudent that overrides the display method to include "Graduate Level" in the output*/
+
+package sample;
+
+
+class Student{
+	private String name;
+	private int grade;
+	
+	Student(){
+		
+		}
+	
+	Student(String name,int grade){
+		this.name=name;
+		this.grade=grade;
+		}
+	
+	
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getGrade() {
+		return grade;
+	}
+	public void setGrade(int grade) {
+		this.grade = grade;
+	}
+	
+	public void dispStudentDetails() {
+		System.out.println("Name:"+name+" "+"Grade:"+grade);
+	}
+	
+	public void updateGrade(int g) {
+		this.grade=g;
+		System.out.println(grade);
+	}
+	
+	public void updateGrade(String g) {
+		int s=Integer.valueOf(g);
+		this.grade=s;
+		System.out.println(grade);
+	}
+	
+}
+
+class GraduateStudent extends Student{
+	public void dispStudentDetails() {
+		System.out.println("Graduate level");
+		super.dispStudentDetails();
+		
+	}
+}
+
+public class Main{
+	public static void main(String[] args) {
+		Student s=new Student();
+		s.updateGrade(12);
+		s.updateGrade(12);
+		
+		GraduateStudent g=new GraduateStudent();
+		g.dispStudentDetails();
+		
+		
+	}
+}

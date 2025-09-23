@@ -1,0 +1,23 @@
+package com.excep;
+
+public class SIConvertionExcep {
+	
+	static void con(String s) {
+		try {
+		int n=Integer.valueOf(s);
+		System.out.println(n);
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	public static void main(String[] args) {
+		String d="123l";
+		
+		con(d);
+		
+
+		
+	}
+
+}

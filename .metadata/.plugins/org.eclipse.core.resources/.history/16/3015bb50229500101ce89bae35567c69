@@ -1,0 +1,28 @@
+package com.sampstr;
+
+public class CountVowelandConsonent {
+	public static void main(String[] args) {
+		
+		String str="ebis paul";
+		
+		String ls=str.toLowerCase();
+		
+		int countVowel=0;
+		int countConsonent=0;
+		
+		
+		for(int i=0;i<str.length();i++) {
+			if(ls.charAt(i)=='a'||ls.charAt(i)=='e'||ls.charAt(i)=='i'||ls.charAt(i)=='o'||ls.charAt(i)=='u') {
+				countVowel++;
+			}else {
+				countConsonent++;
+			}
+		}
+		
+		System.out.println("No of Vowel:"+countVowel);
+		System.out.println("No of Consonent:"+countConsonent);
+		
+		
+	}
+
+}

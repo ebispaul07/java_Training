@@ -1,0 +1,15 @@
+package com.strsample;
+
+public class StringBuilderStudy {
+	public static void main(String[] args) {
+		
+		StringBuilder sb=new StringBuilder("hello");
+		
+		sb.append(" Ebi").append(".s.").append("Paul");
+		
+		System.out.println(sb);
+		
+		
+	}
+
+}

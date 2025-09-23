@@ -1,0 +1,16 @@
+package com.strsample;
+
+public class PrintWordsFromString {
+	public static void main(String[] args) {
+		String a="java is super";
+		
+		for(int i=0;i<a.length();i++) {
+			if(a.charAt(i)==' ') {
+				System.out.println(a.charAt(i));
+			}
+		}
+		
+		
+	}
+
+}

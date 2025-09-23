@@ -1,0 +1,13 @@
+package com.strsample;
+
+public class StringBuilderStudy {
+	public static void main(String[] args) {
+		
+		StringBuilder sb=new StringBuilder("helloqqqqqqqqqqqqq");
+		
+		System.out.println(sb.toString());
+		
+		
+	}
+
+}

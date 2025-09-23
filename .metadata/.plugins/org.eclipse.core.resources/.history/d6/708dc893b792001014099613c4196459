@@ -1,0 +1,35 @@
+package sample;
+
+class V{
+	int a;
+	int b;
+	
+	V(int a,int b){
+		this.a=a;
+		this.b=b;
+	}
+	
+	V(V cop){
+		this.a=cop.a;
+		this.b=cop.b;
+	}
+	
+	public void dis() {
+		System.out.println(a+b);
+	}
+	
+}
+
+
+
+
+public class Main{
+	public static void main(String[] args) {
+		V v1=new V(1,3);
+		v1.dis();
+		
+		V copy=new V(v1);
+		
+		
+	}
+}

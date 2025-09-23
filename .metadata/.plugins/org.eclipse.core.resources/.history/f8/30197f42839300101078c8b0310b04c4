@@ -1,0 +1,19 @@
+package com.excep;
+
+public class Except {
+	public static void main(String[] args) {
+		System.out.println("Exception Handling");
+		System.out.println();
+		
+		int a=10;
+		int b=0;
+		
+		try {
+			int div=a/b;
+			System.out.println(div);
+		}catch(Exception e) {
+			System.out.println(e.getLocalizedMessage());
+		}
+		
+	}
+}

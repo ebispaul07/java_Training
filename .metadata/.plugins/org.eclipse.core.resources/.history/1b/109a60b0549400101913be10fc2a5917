@@ -1,0 +1,20 @@
+package com.str;
+
+public class relplaceChar {
+	public static void main(String[] args) {
+		
+		String name="ebib";
+		
+		String r=name.replaceAll("[aeiou]", "");
+		
+		System.out.println(r);
+		
+		String str="ebispaul";
+		
+		String sub=str.substring(0);
+		
+		System.out.println(sub);
+		
+	}
+
+}

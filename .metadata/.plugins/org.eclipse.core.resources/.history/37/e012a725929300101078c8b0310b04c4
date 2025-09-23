@@ -1,0 +1,18 @@
+package com.excep;
+
+public class SIConvertionExcep {
+	
+	static void con(String s) {
+		int n=Integer.valueOf(s);
+		System.out.println(n);
+	}
+	
+	public static void main(String[] args) {
+		String d=123;
+		
+		con(d);
+		
+		
+	}
+
+}

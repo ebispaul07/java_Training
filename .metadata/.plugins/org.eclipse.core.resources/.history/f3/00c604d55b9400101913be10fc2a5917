@@ -1,0 +1,27 @@
+package com.str;
+
+public class Panagram {
+	public static void main(String[] args) {
+	
+		String s="The quick brown fox jumps over the lazy dog";
+		
+		String ls=s.toLowerCase();
+		
+		boolean flag=false;
+		
+		String repl=ls.replaceAll("[abcdefghijklmnopqrstuvwxyz]", "");
+		
+			
+			
+			if(repl.equals("")) {
+				System.out.println("Panagram");
+			}else {
+				System.out.println("Not Panagram");
+			}
+		
+		
+		
+		
+	}
+
+}

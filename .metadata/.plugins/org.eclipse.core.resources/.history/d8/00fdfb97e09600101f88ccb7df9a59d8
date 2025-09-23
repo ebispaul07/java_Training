@@ -1,0 +1,22 @@
+package com.stri;
+
+public class Permutation {
+	public static void main(String[] args) {
+		String s="hello";
+		
+		String spa="";
+		
+		for(int i=0;i<s.length();i++) {
+			char c=s.charAt(i);
+			
+			String rStr=s.substring(0,i)+s.substring(i+1);
+			
+			
+			System.out.println(c+rStr);
+		}
+		
+	
+		
+		
+	}
+}
